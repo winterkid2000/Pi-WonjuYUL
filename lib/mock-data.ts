@@ -1,64 +1,43 @@
-// lib/mock-data.ts
-
-import { CaseItem } from "./types";
+import type { CaseItem, CaseDetail } from "@/lib/types";
 
 export const mockCases: CaseItem[] = [
   {
     id: "case_001",
-    patient: {
-      id: "p001",
-      name: "Jane Doe",
-      sex: "Female",
-      age: 54,
-    },
+    name: "DOE JANE",
+    sex: "Female",
+    age: "54Y",
     status: "Completed",
+    diagnosis: "Myosteatosis",
+    risk: "High Risk",
     date: "2026-03-10",
     progress: 100,
-    result: {
-      diagnosis: "Myosteatosis",
-      risk: "High Risk",
-      probability: 0.87,
-    },
   },
   {
     id: "case_002",
-    patient: {
-      id: "p002",
-      name: "John Smith",
-      sex: "Male",
-      age: 61,
-    },
-    status: "Processing",
-    date: "2026-03-15",
-    progress: 65,
-  },
-  {
-    id: "case_003",
-    patient: {
-      id: "p003",
-      name: "Emily Chen",
-      sex: "Female",
-      age: 47,
-    },
-    status: "Pending",
-    date: "2026-03-20",
-    progress: 10,
-  },
-  {
-    id: "case_004",
-    patient: {
-      id: "p004",
-      name: "Carlos Ruiz",
-      sex: "Male",
-      age: 58,
-    },
-    status: "Completed",
-    date: "2026-03-05",
-    progress: 100,
-    result: {
-      diagnosis: "Normal",
-      risk: "Low Risk",
-      probability: 0.12,
-    },
+    name: "DOE JANE",
+    sex: "Female",
+    age: "61Y",
+    status: "Running",
+    diagnosis: "Pending",
+    risk: "Pending",
+    date: "2026-03-10",
+    progress: 68,
   },
 ];
+
+export const mockCaseDetail: Record<string, CaseDetail> = {
+  case_001: {
+    case_id: "case_001",
+    patient_name: "DOE JANE",
+    sex: "Female",
+    age: "54Y",
+    status: "Completed",
+    diagnosis: "Myosteatosis",
+    risk: "High Risk",
+    progress: 100,
+    probability: 0.84,
+    nifti_path: "/demo/nifti/case_001.nii.gz",
+    mask_path: "/demo/masks/case_001_mask.nii.gz",
+    radiomics_csv: "/demo/radiomics/case_001.csv",
+  },
+};
