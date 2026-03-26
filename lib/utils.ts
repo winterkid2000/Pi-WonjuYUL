@@ -1,8 +1,8 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { CaseStatus, RiskLevel } from "./types";
+//import { CaseStatus, RiskLevel } from "./types";
 
-export function getStatusColor(status: CaseStatus) {
+export function getStatusColor(status: string) {
   switch (status) {
     case "Completed":
       return "text-green-400";
