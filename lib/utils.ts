@@ -1,3 +1,5 @@
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
 import { CaseStatus, RiskLevel } from "./types";
 
 export function getStatusColor(status: CaseStatus) {
@@ -30,4 +32,8 @@ export function getRiskColor(risk: RiskLevel) {
 
 export function formatPercent(value: number) {
   return `${(value * 100).toFixed(1)}%`;
+}
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }
