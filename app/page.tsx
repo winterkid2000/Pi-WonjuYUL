@@ -124,7 +124,7 @@ const shapFeatures = [
   { name: "wavelet_LLL_glrlm_RunEntropy", value: 0.13 },
 ];
 
-function navIcon(label) {
+function navIcon(label: string) {
   const map = {
     Dashboard: LayoutDashboard,
     Patients: Users,
@@ -134,7 +134,7 @@ function navIcon(label) {
   return map[label] || LayoutDashboard;
 }
 
-function SidebarItem({ active, label, onClick }) {
+function SidebarItem({ active, label, onClick }: any) {
   const Icon = navIcon(label);
   return (
     <button
@@ -151,7 +151,7 @@ function SidebarItem({ active, label, onClick }) {
   );
 }
 
-function StatCard({ title, value, icon: Icon, sub }) {
+function StatCard({ title, value, icon: Icon, sub }: any) {
   return (
     <Card className="rounded-2xl border-slate-200 shadow-sm">
       <CardContent className="flex items-start justify-between p-5">
@@ -168,7 +168,7 @@ function StatCard({ title, value, icon: Icon, sub }) {
   );
 }
 
-function StatusBadge({ status }) {
+function StatusBadge({ status }: any) {
   const styles = {
     Completed: "bg-emerald-100 text-emerald-700",
     Running: "bg-amber-100 text-amber-700",
@@ -178,7 +178,7 @@ function StatusBadge({ status }) {
   return <Badge className={styles[status] || "bg-slate-100 text-slate-700"}>{status}</Badge>;
 }
 
-function RiskBadge({ risk }) {
+function RiskBadge({ risk }: any) {
   const styles = {
     "High Risk": "bg-red-100 text-red-700",
     "Medium Risk": "bg-yellow-100 text-yellow-700",
@@ -188,7 +188,7 @@ function RiskBadge({ risk }) {
   return <Badge className={styles[risk] || "bg-slate-100 text-slate-700"}>{risk}</Badge>;
 }
 
-function DashboardHome({ onOpenCase }) {
+function DashboardHome({ onOpenCase }: any) {
   return (
     <div className="space-y-6">
       <div>
@@ -281,7 +281,7 @@ function DashboardHome({ onOpenCase }) {
   );
 }
 
-function PatientsPage({ onSelectCase, cases }) {
+function PatientsPage({ onSelectCase, cases }: any) {
   return (
     <div className="space-y-6">
       <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
