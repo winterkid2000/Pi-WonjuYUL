@@ -17,7 +17,7 @@ export function getStatusColor(status: string) {
   }
 }
 
-export function getRiskColor(risk: RiskLevel) {
+export function getRiskColor(risk: string) {
   switch (risk) {
     case "Low Risk":
       return "text-green-400";
