@@ -261,7 +261,7 @@ function DashboardHome({ onOpenCase }: any) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {recentCases.map((item) => (
+              {recentCases.map((item: any) => (
                 <TableRow key={item.id} className="cursor-pointer" onClick={onOpenCase}>
                   <TableCell className="font-medium">{item.id}</TableCell>
                   <TableCell>{item.name}</TableCell>
@@ -327,7 +327,7 @@ function PatientsPage({ onSelectCase, cases }: any) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {cases.map((item) => (
+              {cases.map((item: any) => (
                 <TableRow key={item.id}>
                   <TableCell>{item.id}</TableCell>
                   <TableCell>{item.name}</TableCell>
@@ -391,7 +391,7 @@ function AnalysisPage() {
             <CardTitle className="text-base">Pipeline Monitor</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            {pipelineSteps.map((item, idx) => (
+            {pipelineSteps.map((item: any, idx: any) => (
               <div key={item.step} className="flex items-start gap-3 rounded-xl border p-3">
                 <div className={`mt-1 h-3 w-3 rounded-full ${item.done ? "bg-emerald-500" : idx === 4 ? "bg-amber-500" : "bg-slate-300"}`} />
                 <div className="flex-1">
@@ -420,7 +420,7 @@ function AnalysisPage() {
             <Card className="rounded-2xl">
               <CardHeader><CardTitle className="text-base">Top SHAP Features</CardTitle></CardHeader>
               <CardContent className="space-y-3">
-                {shapFeatures.map((feature) => (
+                {shapFeatures.map((feature: any) => (
                   <div key={feature.name} className="space-y-2 rounded-xl border p-3">
                     <div className="flex items-center justify-between gap-3">
                       <p className="truncate text-sm font-medium">{feature.name}</p>
