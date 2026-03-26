@@ -55,6 +55,12 @@ function RiskBadge({ risk }: { risk: string }) {
   return <Badge className={styles[risk] || "bg-slate-100 text-slate-700"}>{risk}</Badge>;
 }
 
+cases.map((c) => (
+  <div key={c.id}>
+    {c.patient.name} - {c.status}
+  </div>
+))
+
 export default function PatientsPage({
   cases,
   isUploading,
