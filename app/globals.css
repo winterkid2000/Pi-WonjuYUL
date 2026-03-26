@@ -29,10 +29,13 @@
 
 @layer base {
   * {
-    @apply border-border box-border;
+    border-color: hsl(var(--border));
+    box-sizing: border-box;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: sans-serif;
     padding: 0;
     margin: 0;
   }
