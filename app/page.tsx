@@ -125,7 +125,7 @@ const shapFeatures = [
 ];
 
 function navIcon(label: string) {
-  const map = {
+  const map: any = {
     Dashboard: LayoutDashboard,
     Patients: Users,
     Analysis: ScanSearch,
