@@ -169,7 +169,7 @@ function StatCard({ title, value, icon: Icon, sub }: any) {
 }
 
 function StatusBadge({ status }: any) {
-  const styles = {
+  const styles: any = { // <-- 여기!
     Completed: "bg-emerald-100 text-emerald-700",
     Running: "bg-amber-100 text-amber-700",
     Failed: "bg-red-100 text-red-700",
@@ -179,7 +179,7 @@ function StatusBadge({ status }: any) {
 }
 
 function RiskBadge({ risk }: any) {
-  const styles = {
+  const styles: any = { // <-- 여기!
     "High Risk": "bg-red-100 text-red-700",
     "Medium Risk": "bg-yellow-100 text-yellow-700",
     Normal: "bg-emerald-100 text-emerald-700",
