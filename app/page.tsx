@@ -1,6 +1,7 @@
 
 "use client";
 import React, { useMemo, useState } from "react";
+import "./globals.css";
 import { motion } from "framer-motion";
 import {
   LayoutDashboard,
