@@ -17,3 +17,11 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const metadata = {
+  title: "Pi-WonjuYUL",
+  description: "Pyramid imaging dashboard",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
