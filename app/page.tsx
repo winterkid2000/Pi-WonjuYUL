@@ -1,10 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import DashboardHome from "@/components/dashboard/dashboard-home";
-import PatientsPage from "@/components/dashboard/patients-page";
-import AnalysisPage from "@/components/dashboard/analysis-page";
-import ReportsPage from "@/components/dashboard/reports-page";
+import DashboardHome from "@/components/dashboard/dashboard_home";
+import PatientsPage from "@/components/dashboard/patients_page";
+import AnalysisPage from "@/components/dashboard/analysis_page";
+import ReportsPage from "@/components/dashboard/reports_page";
 import { mockCases, mockCaseDetail } from "@/lib/mock-data";
 
 export default function Page() {
