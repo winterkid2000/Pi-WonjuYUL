@@ -408,15 +408,15 @@ function AnalysisPage() {
         </Card>
       </div>
 
-      <Tabs defaultValue="radiomics" className="space-y-4">
-        <TabsList className="grid w-full grid-cols-4 items-center rounded-xl bg-slate-200/60 p-1 h-12 mb-6">
-          <TabsTrigger value="radiomics">Radiomics</TabsTrigger>
-          <TabsTrigger value="prediction">Prediction</TabsTrigger>
-          <TabsTrigger value="report">Report</TabsTrigger>
-          <TabsTrigger value="chat">AI Chat</TabsTrigger>
+<Tabs defaultValue="chat" className="flex flex-col w-full space-y-4">
+        <TabsList className="flex w-full h-12 bg-slate-200/60 p-1 rounded-xl">
+          <TabsTrigger className="flex-1 h-full rounded-lg" value="radiomics">Radiomics</TabsTrigger>
+          <TabsTrigger className="flex-1 h-full rounded-lg" value="prediction">Prediction</TabsTrigger>
+          <TabsTrigger className="flex-1 h-full rounded-lg" value="report">Report</TabsTrigger>
+          <TabsTrigger className="flex-1 h-full rounded-lg" value="chat">AI Chat</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="radiomics">
+        <TabsContent value="radiomics" className="w-full">
           <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
             <Card className="rounded-2xl">
               <CardHeader><CardTitle className="text-base">Top SHAP Features</CardTitle></CardHeader>
@@ -445,7 +445,7 @@ function AnalysisPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="prediction">
+        <TabsContent value="prediction" className="w-full">
           <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
             <Card className="rounded-2xl"><CardContent className="p-6"><p className="text-sm text-slate-500">Diagnosis</p><p className="mt-2 text-2xl font-semibold">Myosteatosis</p></CardContent></Card>
             <Card className="rounded-2xl"><CardContent className="p-6"><p className="text-sm text-slate-500">Probability</p><p className="mt-2 text-2xl font-semibold">0.84</p></CardContent></Card>
@@ -453,7 +453,7 @@ function AnalysisPage() {
           </div>
         </TabsContent>
 
-        <TabsContent value="report">
+        <TabsContent value="report" className="w-full">
           <Card className="rounded-2xl">
             <CardHeader className="flex flex-row items-center justify-between">
               <CardTitle className="text-base">Generated Report</CardTitle>
@@ -470,16 +470,16 @@ function AnalysisPage() {
           </Card>
         </TabsContent>
 
-        <TabsContent value="chat">
-          <Card className="rounded-2xl">
+        <TabsContent value="chat" className="w-full">
+          <Card className="rounded-2xl w-full">
             <CardHeader><CardTitle className="text-base">Chat with Report</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div className="min-h-[240px] rounded-2xl border bg-slate-50 p-4 text-sm text-slate-600">
                 Chat history placeholder. Connect this to your BioMistral or DeepSeek worker later.
               </div>
-              <div className="flex gap-2">
-                <Input placeholder="Ask about the report, SHAP features, or patient context..." />
-                <Button className="gap-2"><MessageSquare className="h-4 w-4" />Send</Button>
+              <div className="flex gap-2 w-full">
+                <Input className="flex-1" placeholder="Ask about the report, SHAP features, or patient context..." />
+                <Button className="gap-2 shrink-0"><MessageSquare className="h-4 w-4" />Send</Button>
               </div>
             </CardContent>
           </Card>
