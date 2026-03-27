@@ -409,7 +409,7 @@ function AnalysisPage() {
       </div>
 
       <Tabs defaultValue="radiomics" className="space-y-4">
-        <TabsList className="grid w-full grid-cols-4 rounded-2xl">
+        <TabsList className="grid w-full grid-cols-4 items-center rounded-xl bg-slate-200/60 p-1 h-12 mb-6">
           <TabsTrigger value="radiomics">Radiomics</TabsTrigger>
           <TabsTrigger value="prediction">Prediction</TabsTrigger>
           <TabsTrigger value="report">Report</TabsTrigger>
